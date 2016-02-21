@@ -1,7 +1,15 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
         Lab lab = new Lab();    // Java is just amazing
-        lab.GetLettersAndPrintStuff();
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Give me integer\n> ");
+        try {
+            lab.GetLettersAndPrintStuff(keyboard.nextInt());
+        } catch (Exception e) {
+            System.out.println("Exception thrown  :" + e);
+        }
     }
 }
